@@ -1,10 +1,11 @@
 import tensorflow as tf
+from tensorflow import keras
+import os
 
-model1 = tf.keras.models.load_model("models/1.h5")
-model2 = tf.keras.models.load_model("models/2.h5")
-model3= tf.keras.models.load_model("models/3.h5")
+model = keras.models.load_model("C:/Users/CHAMA COMPUTERS/Desktop/Data_Science/AI_ML/DeepLearning/PotatoDiseaseClassificationCNN/-Potato_Disease_Classification_CNN/models/3.h5")
 
-# Export to TensorFlow Serving format
-tf.saved_model.save(model1, "models/1/")
-tf.saved_model.save(model2, "models/2/")
-tf.saved_model.save(model3, "models/3/")
+
+model.export("C:/Users/CHAMA COMPUTERS/Desktop/Data_Science/AI_ML/DeepLearning/PotatoDiseaseClassificationCNN/-Potato_Disease_Classification_CNN/models/3")
+
+
+

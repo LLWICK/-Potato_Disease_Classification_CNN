@@ -4,10 +4,12 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
+from tensorflow import keras
 
 app = FastAPI()
 
-model = tf.keras.models.load_model("../models/1.h5")
+model = tf.keras.models.load_model("C:/Users/CHAMA COMPUTERS/Desktop/Data_Science/AI_ML/DeepLearning/PotatoDiseaseClassificationCNN/-Potato_Disease_Classification_CNN/models/3.h5")
+
 
 labels = ['Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy']
 

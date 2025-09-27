@@ -8,7 +8,7 @@ import requests
 
 app = FastAPI()
 
-endpoint = "http://localhost:8501/v1/models/potatoes_model:predict"
+endpoint = "http://localhost:8502/v1/models/potatoes_model:predict"
 
 labels = ['Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy']
 
@@ -33,8 +33,8 @@ async def predict(file: UploadFile):
     response = requests.post(endpoint,json=json_data)
 
     predictions = np.array(response.json()["predictions"][0])
-    predicted_class = np.argmax(predictions)
-    accuracy = np.max(predictions)
+    predicted_class = labels[int(np.argmax(predictions))]
+    accuracy = 100*float(np.max(predictions))
 
 
     return {"Prediction": predicted_class, "Accuracy": accuracy}
