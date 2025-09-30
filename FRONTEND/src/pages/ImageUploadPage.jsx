@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import axios from "axios";
 import Header from "../components/Header";
-import backgroundImage from "../assets/bg1.jpg"; // replace with your image path
+import backgroundImage from "../assets/bg1.jpg";
 
 function ImageUploadPage() {
   const [preview, setPreview] = useState(null);

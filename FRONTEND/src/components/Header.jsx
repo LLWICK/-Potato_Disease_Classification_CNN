@@ -1,11 +1,12 @@
 import React from "react";
+import logo from "../assets/logo1.jpg";
 
 function Header() {
   return (
     <header class="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md">
       <div class="flex-1 flex justify-between items-center">
         <a href="#" class="text-xl">
-          Company
+          <img src={logo} class="w-30" />
         </a>
       </div>
 
@@ -36,11 +37,7 @@ function Header() {
                 Treatments
               </a>
             </li>
-            <li>
-              <a class="md:p-4 py-3 px-0 block" href="#">
-                Blog
-              </a>
-            </li>
+
             <li>
               <a class="md:p-4 py-3 px-0 block md:mb-0 mb-2" href="#">
                 Contact Us
